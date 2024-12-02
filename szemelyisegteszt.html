@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Szabó Eszter">
+    <meta name="description" content="Egy személyiségteszt">
+    <link rel="icon" type="image/png" sizes="96x96" href="képek/favikon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Edu+AU+VIC+WA+NT+Pre:wght@500&display=swap"
+        rel="stylesheet">
+    <title>Személyiségteszt</title>
+</head>
+
+<body>
+    <header>
+        <h1>Varjúfélék</h1>
+    </header>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="varju.html">Varjú</a></li>
+                <li><a href="hollo.html">Holló</a></li>
+                <li><a href="szarka.html">Szarka</a></li>
+                <li><a href="#" id="active">Személyiségteszt</a></li>
+            </ul>
+        </nav>
+        <article class="content">
+            <article class="bev">
+                <h1>Kiváncsi vagy hogy melyik varjúféle lennél? - Töltsd ki ezt a tesztet és tudd meg!</h1>
+            </article>
+            <article class="cikk">
+                <form action="#" class="szemelyiseg">
+                    <h1>Hogyan biciklizel?</h1>
+                    <label><input type="radio" name="bicikli" id="a"> Tekerem és tekerem, semmi se állít meg</label>
+                    <label><input type="radio" name="bicikli" id="b"> Normálisan? Duh...</label>
+                    <label><input type="radio" name="bicikli" id="c"> Hagyom hogy a szél hajtson</label>
+                    <h1>Milyen szakállad lenne legszivesebben?</h1>
+                    <label><input type="radio" name="szakall" id="d"><img src="képek/05_személyiségteszt/pexels-olly-874158.jpg" alt="rendezett rövid szakáll"></label>
+                    <label><input type="radio" name="szakall" id="e"><img src="képek/05_személyiségteszt/pexels-pixabay-532739.jpg" alt="hosszú rendezetlen szakáll"></label>
+                    <label><input type="radio" name="szakall" id="f"><img src="képek/05_személyiségteszt/joackim-weiler-lxX0dJQHV3w-unsplash.jpg" alt="közepes hosszú rendezett szakáll"></label>
+                    <h1>Kivel beszélgetnél legszivesebben?</h1>
+                    <label><input type="radio" name="beszel" id="g"><img src="képek/05_személyiségteszt/ravi-patel-VMGAbeeJTKo-unsplash.jpg" alt="kép egy nagymamáról"></label>
+                    <label><input type="radio" name="beszel" id="h"><img src="képek/05_személyiségteszt/549337b50e299db637aeff86e67d32d2.jpg" alt="kép egy szörnyről"></label>
+                    <label><input type="radio" name="beszel" id="i"><img src="képek/05_személyiségteszt/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="kép egy mosolygó férfiról"></label>
+                    <h1>Hova mennél vakációzni?</h1>
+                    <label><input type="radio" name="vakacio" id="j"> Európa</label>
+                    <label><input type="radio" name="vakacio" id="k"> Észak-Amerika</label>
+                    <label><input type="radio" name="vakacio" id="l"> Dél-kelet Ázsia</label>
+                    <h1>Válassz egyet!</h1>
+                    <label><input type="radio" name="dolog" id="m"><img src="képek/05_személyiségteszt/sourajit-hazra-hIVVf4RiPUY-unsplash.jpg" alt="pénzérme"></label>
+                    <label><input type="radio" name="dolog" id="n"><img src="képek/05_személyiségteszt/simon-taylor-42h1Dt4B_vk-unsplash.jpg" alt="cigicsikk"></label>
+                    <label><input type="radio" name="dolog" id="o"><img src="képek/05_személyiségteszt/zoe-jMjXwF1u5k4-unsplash.jpg" alt="kupak"></label><br>
+                    <div class="gomb"><a href="#madar" class="myButton" id="myButton">Elküldés</a></div>
+                    
+                    
+                </form>
+            </article>
+            <article class="madar" id="madar">
+                <h2>A te madarad....</h2>
+                <article id="valasz"></article>
+            </article>
+        </article>
+    </div>
+    <footer>
+        <p>Ez az oldal csak a képzeleted foszlánya, nem valós.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
