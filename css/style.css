@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    scroll-behavior: smooth;
+    height: fit-content;
+    padding: 0;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+   
+}
+.container>*{
+    height: fit-content;
+    
+}
+/* rgb(21, 27, 36)  sötét
+rgb(76, 91, 112) mid
+rgb(136, 154, 181) világos
+rgb(202, 213, 230) fehérszerű
+*/
+
+/* szerkezeti elemek */
+header {
+    background-color: rgb(136, 154, 181);
+    color: rgb(21, 27, 36);
+    font-weight: bold;
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    padding: 10px;
+    font-size: large;
+
+}
+nav.menu {
+    background-color: rgb(21, 27, 36);
+    text-align: center;
+    flex-basis: 100%;
+    padding: 5px;
+    
+}
+article {
+    background-color: rgb(76, 91, 112);
+    color: rgb(136, 154, 181) ;
+    padding: 0px;
+    flex-basis: 100%;
+}
+footer {
+    background-color: rgb(136, 154, 181);
+    color: rgb(21, 27, 36);
+    text-align: center;
+    font-family: "Crimson Text", serif;
+
+}
+article.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: 100%;
+}
+
+
+/* menü formázás */
+nav.menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+nav.menu li{    
+    display: block;
+    flex-basis: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;   
+    text-align: center;
+    position: relative;
+}
+nav.menu a{    
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(136, 154, 181);
+    overflow: hidden;
+    position: relative; /*hogy a before tudjon alá menni*/
+    text-align: center;
+    z-index: 1;
+    border: 1px solid rgb(136, 154, 181);
+    border-radius: 10px;
+    padding: 10px;
+    transition: color 0.4s ease 0.1s;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 400;
+
+}
+nav.menu a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(136, 154, 181);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+nav.menu a:hover::before{
+    transform: translateX(100%);
+}
+nav.menu a:hover{
+    color:rgb(21, 27, 36);
+}
+nav.menu a#active{
+    background-color: rgb(136, 154, 181);
+    color: rgb(21, 27, 36);
+    border: 1px solid rgb(136, 154, 181);
+}
+
+/* tartalomjegyzék */
+nav.tart{
+    background-color: rgb(136, 154, 181);
+    margin: 2%;
+    padding: 0px;
+    flex-basis: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;   
+}
+nav.tart ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+nav.tart li{
+    flex-basis: 48%;
+    margin: 1%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav.tart a{
+    display: block;
+    text-decoration: none;
+    color: rgb(21, 27, 36);
+    flex-basis: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    
+}
+nav.tart a:hover{
+    background-color: rgb(21, 27, 36);
+    color: rgb(136, 154, 181);
+}
+
+
+
+figure{
+    margin: 2%;
+    padding: 0px;    
+}
+
+figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 15px;
+    border: 5px solid rgb(21, 27, 36);
+}
+article.madar {
+    margin: 2%;
+    padding: 10px;
+    background-color: rgb(21, 27, 36);
+    border-radius: 15px;
+}
+article.madar h2{
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+article.madar p{
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-size: large;
+    margin: 5px;
+    background-color: rgb(21, 27, 36);
+}
+article#valasz{
+    background-color: rgb(21, 27, 36);
+}
+article.cikk{
+    margin: 2%;
+    padding: 10px;
+    background-color: rgb(21, 27, 36);
+    border-radius: 15px;
+
+}
+article.cikk h1{
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+}
+article.cikk h2{
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2em;
+  }
+  
+article.cikk p{
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-size: large;
+  margin: 5px;
+}
+
+article.bev{
+    background-color: rgb(21, 27, 36);
+    margin: 0;
+    padding: 20px 10px 20px 10px;
+    border-radius: 0 0 15px 15px;
+}
+article.bev h1{
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.7em;
+  text-align: center;
+}
+article.bev p{
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-size: large;
+    margin: 5px;
+  }
+article.bef{
+    background-color: rgb(21, 27, 36);
+    margin: 0;
+    padding: 20px 10px 20px 10px;
+    border-radius: 15px 15px 0px 0px;
+}
+article.bef h1{
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.7em;
+  text-align: center;
+}
+article.bef p{
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-size: large;
+    margin: 5px;
+}
+p.idezet{
+    font-style: italic;
+}
+form{
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-size: large;
+
+}
+article.bef form{
+    display: flex;
+    flex-wrap: wrap;
+}
+article.bef input,select,label,textarea{
+    margin: 5px;
+    resize: none;
+}
+article.bef input, textarea{
+    border-radius: 15px;
+    padding: 10px;
+}
+form#madarlat{
+    display: flex;
+    flex-wrap: wrap;
+}
+form#madarlat h2, .gombok{
+    text-align: center;
+    flex-basis: 100%;
+}
+form#madarlat label, select, textarea{
+    padding: 0;
+    margin: 0;
+    margin: 5px;
+}
+form#madarlat input, textarea{
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+.kerd{
+    flex-basis: 100%;
+}
+
+/* személyiségteszt */
+form.szemelyiseg{
+    display: flex;
+    flex-wrap: wrap;
+}
+form.szemelyiseg h1{
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 400;
+    flex-basis: 100%;
+}
+form.szemelyiseg img{
+    width: 100%;
+}
+form.szemelyiseg label{
+    display: block;
+    flex-basis: 95%;
+    font-weight: 600;
+    font-size: large;
+}
+form.szemelyiseg div.gomb{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+form.szemelyiseg a.myButton{
+    background-color:rgb(76, 91, 112);
+	border-radius:15px;
+	border:5px solid rgb(136, 154, 181);
+	display: block;
+	cursor:pointer;
+	color:rgb(202, 213, 230);
+	font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-weight: 400;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px rgb(21, 27, 36);   
+}
+form.szemelyiseg a.myButton:hover{
+    background-color:rgb(21, 27, 36);
+}
+form.szemelyiseg a.myButton:active {
+	position:relative;
+	top:1px;
+}
+article.madar img{
+    width: 100%;
+}
+article.index{
+    width: 96%;
+    max-width: 96vw; 
+    overflow: hidden;
+}
+/* album formázása */
+.slider {
+    display: block;
+    width: 93%;    
+    margin: 0px auto;
+}
+.slick-slide {
+    margin: 0px 5px;
+}
+.slick-slide img {
+    max-width: 100%;
+    width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: rgb(21, 27, 36);
+}
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+.slick-active {
+    opacity: .5;
+}
+.slick-current {
+    opacity: 1;
+}
+@media only screen and (min-width: 600px) {
+    nav.menu ul{
+        align-items: flex-start;
+    }
+    nav.menu li{
+        flex-basis: 28%;
+        margin: 15px 2%;
+    }
+    form.szemelyiseg label{
+        display: block;
+        flex-basis: 30%;
+    }
+    .kerd{
+        flex-basis: 50%;      
+    }
+    .gombok{
+        display: block;
+        flex-basis: 100%;
+        padding: 10px;
+        padding-left: 0;
+        text-align: center;
+    }
+    article.index{
+        flex-basis: 96%;
+        max-width: 96vw; 
+        overflow: hidden;
+    }  
+}
+@media only screen and (min-width: 768px) {
+    nav.menu ul{
+        justify-content: space-around;
+    }
+    nav.menu li{
+        flex-basis: 15%;
+        margin: 15px 0.5%;
+    }
+    figure{
+        flex-basis: 21%;
+    }    
+    article.cikk{
+        flex-basis: 71%;
+    }
+    article.index{
+        flex-basis: 96%;
+        max-width: 96vw; 
+        overflow: hidden;
+    }
+    article.madar{
+        flex-basis: 21%;
+    }
+    
+    nav.tart li{
+        flex-basis: 21%;
+    }
+}
